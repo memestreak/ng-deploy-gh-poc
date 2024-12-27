@@ -1,16 +1,17 @@
 # NgDeployGhPoc
 
-This repo is a proof of concept of hosting an [Angular] application on
-[GitHub Pages].
+This repo is a proof of concept of hosting an [Angular][Angular] application on
+[GitHub Pages][GitHub Pages].
 
-The application itself was generated with the [Angular CLI] [^1].
+The application itself was generated with the [Angular CLI][Angular
+CLI] [^1].
 
 ```sh
 # E.g.,
 ng new ng-deploy-gh-poc
 ```
 
-I chose to use [SCSS] and no server-side rendering.
+I chose to use [SCSS][SCSS] and no server-side rendering.
 
 ## Build / Deploy
 
