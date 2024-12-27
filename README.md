@@ -1,27 +1,34 @@
 # NgDeployGhPoc
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+This repo is a proof of concept of hosting an [Angular] application on
+[GitHub Pages].
 
-## Development server
+The application itself was generated with the [Angular CLI] [^1].
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```sh
+# E.g.,
+ng new ng-deploy-gh-poc
+```
 
-## Code scaffolding
+I chose to use [SCSS] and no server-side rendering.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Build / Deploy
 
-## Build
+```shell
+ng build --output-path docs --base-href /ng-deploy-gh-poc/
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The above command writes its output to a ./docs/browser.
 
-## Running unit tests
+## GitHub Configuration
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In the project's GitHub Pages settings, we choose to use GitHub
+Actions. The default workflow template only had to be updated
+([here][static-template-change]) to use the path `docs/browser`.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[^1]: "ng --version" is 18.2.12.
+[Angular]: https://angular.dev/
+[GitHub Pages]: https://pages.github.com/
+[Angular CLI]: https://angular.dev/tools/cli
+[SCSS]: https://sass-lang.com/
+[static-template-change]: https://github.com/memestreak/ng-deploy-gh-poc/blob/904027ac25bae6dcc96578d3f83532ff6f707f5e/.github/workflows/static.yml#L41
